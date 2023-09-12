@@ -13,9 +13,7 @@ public class SpeakingClockService {
 				return ResponseEntity.badRequest().body("Invalid time input!");
 			}
 			int hours = Integer.parseInt(str[0]);
-			System.out.println(hours);
 			int minutes = Integer.parseInt(str[1]);
-			System.out.println(minutes);
 			if ((hours < 0 || hours > 23) || (minutes < 0 || minutes > 59)) {
 				return ResponseEntity.badRequest().body("Please enter valid hours and minutes value!");
 			}
@@ -26,9 +24,7 @@ public class SpeakingClockService {
 				return ResponseEntity.ok("It's Midday");
 			}
 			String hoursWord = numberToWord(hours);
-			System.out.println(hoursWord);
 			String minuteWord = numberToWord(minutes);
-			System.out.println(minuteWord);
 			return ResponseEntity.ok("It's " + hoursWord + " " + minuteWord);
 		} catch (
 
